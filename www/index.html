@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
+        <title>Hello World</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+            function getDeviceInfo(){
+                var info = "";
+                info += "The Device Model : " + device.model + "<br/>";
+                info += "Device Name: " + device.name + "<br/>";
+                info += "Cordova version : " + device.cordova + "<br/>";
+                info += "Platform : " + device.platform + "<br/>";
+                info += "UUID : " + device.uuid + "<br/>";
+                info += "Version : " + device.version + "<br/>";
+                info += "Manufacture : " + device.manufacturer + "<br/>";
+                document.getElementById("lblDeviceInfo").innerHTML = info;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="button" value="Get Device Info" onclick="getDeviceInfo();">
+        </div>
+        <label id="lblDeviceInfo"></label>
+    </body>
+</html>
